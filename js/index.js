@@ -63,3 +63,19 @@ document.querySelectorAll('p')[5].textContent = siteContent['contact']['address'
 document.querySelectorAll('p')[6].textContent = siteContent['contact']['phone']
 document.querySelectorAll('p')[7].textContent = siteContent['contact']['email']
 document.querySelectorAll('p')[8].textContent = siteContent['footer']['copyright']
+
+const siteNav = document.querySelector('header nav')
+
+const linkAppend = document.createElement('a')
+linkAppend.href = "#"
+linkAppend.textContent = "More"
+siteNav.appendChild(linkAppend)
+
+const linkPrepend = document.createElement('a')
+linkPrepend.href = "#"
+linkPrepend.textContent = "New"
+siteNav.prepend(linkPrepend)
+
+for (let i = 0; i < document.querySelector('nav').querySelectorAll('a').length; i++){
+  document.querySelector('nav').querySelectorAll('a')[i].style.color="green"
+}
